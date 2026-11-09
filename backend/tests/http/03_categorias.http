@@ -1,0 +1,27 @@
+@baseUrl = http://localhost:8000/api/v1
+
+### 1. Listar categorías activas (Público)
+GET {{baseUrl}}/categorias
+
+### 2. Obtener categoría por ID (Público)
+GET {{baseUrl}}/categorias/1
+
+### 3. Crear categoría (Requiere Admin)
+POST {{baseUrl}}/categorias
+Content-Type: application/json
+
+{
+  "nombre": "Ensaladas",
+  "descripcion": "Ensaladas frescas y saludables"
+}
+
+### 4. Actualizar categoría (Requiere Admin)
+PUT {{baseUrl}}/categorias/1
+Content-Type: application/json
+
+{
+  "nombre": "Hamburguesas Premium"
+}
+
+### 5. Eliminar categoría - Baja Lógica (Requiere Admin)
+DELETE {{baseUrl}}/categorias/5

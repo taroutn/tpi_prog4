@@ -1,0 +1,30 @@
+@baseUrl = http://localhost:8000/api/v1
+
+### 1. Registrar un nuevo usuario cliente
+POST {{baseUrl}}/auth/register
+Content-Type: application/json
+
+{
+  "username": "cliente1",
+  "full_name": "Pedro Salazar",
+  "email": "pedro@example.com",
+  "password": "Password123!"
+}
+
+### 2. Login de Administrador (Establece la cookie HttpOnly)
+POST {{baseUrl}}/auth/token
+Content-Type: application/x-www-form-urlencoded
+
+username=admin&password=Admin123!
+
+### 3. Login de Cliente (Descomentar para probar como cliente)
+# POST {{baseUrl}}/auth/token
+# Content-Type: application/x-www-form-urlencoded
+#
+# username=cliente1&password=Password123!
+
+### 4. Obtener perfil actual (Verificar sesión activa)
+GET {{baseUrl}}/auth/me
+
+### 5. Cerrar sesión
+POST {{baseUrl}}/auth/logout

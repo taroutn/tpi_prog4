@@ -1,0 +1,11 @@
+@baseUrl = http://localhost:8000/api/v1
+# Requiere haber ejecutado el Login de Administrador previamente
+
+### 1. Listar todos los usuarios
+GET {{baseUrl}}/admin/usuarios
+
+### 2. Desactivar un usuario (Reemplazar ID)
+POST {{baseUrl}}/admin/usuarios/2/desactivar
+
+### 3. Activar un usuario (Reemplazar ID)
+POST {{baseUrl}}/admin/usuarios/2/activar

@@ -1,0 +1,41 @@
+@baseUrl = http://localhost:8000/api/v1
+
+### 1. Listar productos con filtros y paginación (Público)
+GET {{baseUrl}}/productos?skip=0&limit=10&search=pizza&categoria_id=2
+
+### 2. Obtener producto por ID (Público)
+GET {{baseUrl}}/productos/1
+
+### 3. Crear producto (Requiere Admin)
+POST {{baseUrl}}/productos
+Content-Type: application/json
+
+{
+  "nombre": "Ensalada César",
+  "descripcion": "Lechuga, crutones, parmesano y aderezo césar.",
+  "precio_base": 7500.0,
+  "imagen_url": "https://ejemplo.com/cesar.jpg",
+  "stock": 10,
+  "disponible": true,
+  "categoria_id": 1
+}
+
+### 4. Actualizar producto parcialmente (Requiere Admin)
+PUT {{baseUrl}}/productos/1
+Content-Type: application/json
+
+{
+  "precio_base": 12500.0
+}
+
+### 5. Actualizar stock y disponibilidad (Requiere Admin)
+PATCH {{baseUrl}}/productos/1/stock
+Content-Type: application/json
+
+{
+  "stock": 50,
+  "disponible": true
+}
+
+### 6. Eliminar producto - Baja Lógica (Requiere Admin)
+DELETE {{baseUrl}}/productos/11
