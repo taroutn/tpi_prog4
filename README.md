@@ -2,8 +2,8 @@
 
 Aplicación web full-stack para la gestión de pedidos de un negocio gastronómico, construida con **FastAPI + SQLModel** en el backend (arquitectura en capas con patrón *Unit of Work* y autenticación JWT mediante cookies `HttpOnly`) y **React 19 + TypeScript + Vite + Tailwind CSS 4** en el frontend (*TanStack Query*, *TanStack Form*, *TanStack Table* y *Zustand*).
 
-- **Repositorio GitHub:** `https://github.com/Lautaro-Cejas/tpi-food-store`
-- **Video de demostración:** *(Reemplazar con enlace público al video de 10-15 min)*
+- **Repositorio GitHub:** `https://github.com/taroutn/tpi_prog4`
+- **Video de demostración:** https://youtu.be/puSC6okOTh8
 
 ---
 
